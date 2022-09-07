@@ -1,0 +1,30 @@
+<h1>Listar Clientes:</h1>
+<a href="<%=  new_cliente_path %>" class="btn btn-primary btn-icon-split">
+  <span class="icon text-white-50">
+    <i class="fas fa-flag"></i>
+  </span>
+  <span class="text"> Novo Cliente</span>
+</a>
+<br>
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nome</th>
+      <th>Data Nascimento </th>     
+    </tr>
+  </thead>
+  <tbody>
+    <% @clientes.each do |cliente| %> 
+      <br>
+      <tr>
+        <td><%= cliente.id %></td>
+        <td><%= cliente.nome %></td>
+        <td><%= cliente.dataNascimento %></td>       
+        <td><%= link_to "Editar", cliente_path(cliente), class:"btn btn-primary" %></td>        
+      </tr>
+      <% end %>
+  </tbody>
+</table>
+
+

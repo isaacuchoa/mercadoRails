@@ -1,0 +1,13 @@
+<h1>Editar Produtos:</h1><br>
+<p style="color: green"><%= notice %></p>
+
+<%= render @produto %>
+
+<div class="row">
+  <div class="col-ld-8">
+  <%= link_to "Editar", edit_produto_path(@produto),  class:"btn btn-primary" %> |
+  <%= link_to "Voltar", produtos_path,  class:"btn btn-primary" %>
+
+  <h5 class="card-header"><%= button_to "Deletar", @produto, method: :delete,  class:"btn btn-danger" %></h5>
+</div>
+</div>

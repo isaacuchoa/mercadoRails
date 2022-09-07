@@ -1,0 +1,32 @@
+<h1>Listar Produtos:</h1>
+<a href="<%= new_produto_path %>" class="btn btn-primary btn-icon-split">
+  <span class="icon text-white-50">
+    <i class="fas fa-flag"></i>
+  </span>
+  <span class="text"> Novo Produto</span>
+</a>
+<br>
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nome</th>
+      <th>Descrição </th>
+      <th>Valor </th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @produtos.each do |produto| %> 
+      <br>
+      <tr>
+        <td><%= produto.id %></td>
+        <td><%= produto.nome %></td>
+        <td><%= produto.descricao %></td>
+        <td><%= produto.valor %></td>
+        <td><%= link_to "Editar", produto_path(produto), class:"btn btn-primary" %></td>
+      </tr>
+      <% end %>
+  </tbody>
+</table>
+
+

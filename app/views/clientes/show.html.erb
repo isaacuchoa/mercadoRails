@@ -1,0 +1,16 @@
+<h1>Editar Clientes:</h1><br>
+<p style="color: green"><%= notice %></p>
+
+<%= render @cliente %>
+
+<div class="row">
+  <div class="col-ld-8">
+    <%= link_to "Editar", edit_cliente_path(@cliente), class:"btn btn-primary" %> |
+    <%= link_to "Voltar", clientes_path, class:"btn btn-primary" %>
+
+  
+  <h5 class="card-header">  <%= button_to "Deletar", @cliente, method: :delete, class:"btn btn-danger" %> </h5>
+  
+   
+  </div>
+</div>
